@@ -28,7 +28,7 @@ export function Header() {
     setMegaOpen(true);
   };
   const handleCatLeave = () => {
-    megaTimeoutRef.current = setTimeout(() => setMegaOpen(false), 150);
+    megaTimeoutRef.current = setTimeout(() => setMegaOpen(false), 300);
   };
 
   const col1 = CATEGORIES.slice(0, 3);
@@ -82,58 +82,50 @@ export function Header() {
 
               {/* Mega dropdown panel */}
               {megaOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 bg-card border border-border rounded-2xl shadow-card-hover z-50 p-5"
-                  style={{ width: '620px' }}
-                  onMouseEnter={handleCatEnter}
-                  onMouseLeave={handleCatLeave}
-                >
-                  <div className="grid grid-cols-3 gap-6">
-                    {[col1, col2, col3].map((col, ci) => (
-                      <div key={ci} className="space-y-4">
-                        {col.map((cat) => {
-                          const name = language === 'ka' ? cat.nameKa : cat.nameEn;
-                          return (
-                            <div key={cat.id}>
-                              <Link
-                                href={`/category/${cat.slug}`}
-                                onClick={() => setMegaOpen(false)}
-                                className="flex items-center gap-2 text-[13px] font-semibold text-text-primary hover:text-blue transition-colors mb-2"
-                              >
-                                <span className="text-base">{cat.emoji}</span>
-                                {name}
-                              </Link>
-                              <div className="space-y-1 pl-6">
-                                {cat.subcategories.slice(0, 3).map((sub) => (
-                                  <Link
-                                    key={sub.slug}
-                                    href={`/category/${cat.slug}?sub=${sub.slug}`}
-                                    onClick={() => setMegaOpen(false)}
-                                    className="block text-[12px] text-text-muted hover:text-blue transition-colors py-0.5"
-                                  >
-                                    {language === 'ka' ? sub.nameKa : sub.nameEn}
-                                  </Link>
-                                ))}
+                <>
+                  {/* invisible bridge covers the gap between button and panel */}
+                  <div className="absolute top-full left-0 w-full h-3" />
+                  <div
+                    className="absolute top-full left-0 mt-3 bg-card border border-border rounded-2xl shadow-card-hover z-50 p-5"
+                    style={{ width: '620px' }}
+                    onMouseEnter={handleCatEnter}
+                    onMouseLeave={handleCatLeave}
+                  >
+                    <div className="grid grid-cols-3 gap-6">
+                      {[col1, col2, col3].map((col, ci) => (
+                        <div key={ci} className="space-y-4">
+                          {col.map((cat) => {
+                            const name = language === 'ka' ? cat.nameKa : cat.nameEn;
+                            return (
+                              <div key={cat.id}>
+                                <Link
+                                  href={`/category/${cat.slug}`}
+                                  onClick={() => setMegaOpen(false)}
+                                  className="flex items-center gap-2 text-[13px] font-semibold text-text-primary hover:text-blue transition-colors mb-2"
+                                >
+                                  <span className="text-base">{cat.emoji}</span>
+                                  {name}
+                                </Link>
+                                <div className="space-y-1 pl-6">
+                                  {cat.subcategories.slice(0, 3).map((sub) => (
+                                    <Link
+                                      key={sub.slug}
+                                      href={`/category/${cat.slug}?sub=${sub.slug}`}
+                                      onClick={() => setMegaOpen(false)}
+                                      className="block text-[12px] text-text-muted hover:text-blue transition-colors py-0.5"
+                                    >
+                                      {language === 'ka' ? sub.nameKa : sub.nameEn}
+                                    </Link>
+                                  ))}
+                                </div>
                               </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    ))}
+                            );
+                          })}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
-                    <span className="text-[12px] text-text-muted">
-                      {CATEGORIES.length} {language === 'ka' ? 'კატეგორია' : 'categories available'}
-                    </span>
-                    <Link
-                      href="/catalog"
-                      onClick={() => setMegaOpen(false)}
-                      className="text-[12px] font-semibold text-blue hover:text-blue-dark transition-colors"
-                    >
-                      {language === 'ka' ? 'სრული კატალოგი →' : 'View Full Catalog →'}
-                    </Link>
-                  </div>
-                </div>
+                </>
               )}
             </div>
 
