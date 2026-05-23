@@ -63,7 +63,7 @@ export function Header() {
 
             {/* Categories mega dropdown */}
             <div
-              className="relative"
+              className="relative pb-3"
               onMouseEnter={handleCatEnter}
               onMouseLeave={handleCatLeave}
             >
@@ -83,8 +83,6 @@ export function Header() {
               {/* Mega dropdown panel */}
               {megaOpen && (
                 <>
-                  {/* invisible bridge covers the gap between button and panel */}
-                  <div className="absolute top-full left-0 w-full h-3" />
                   <div
                     className="absolute top-full left-0 mt-3 bg-card border border-border rounded-2xl shadow-card-hover z-50 p-5"
                     style={{ width: '620px' }}
