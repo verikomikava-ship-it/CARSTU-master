@@ -1,0 +1,49 @@
+{
+  "name": "manqanaaccessory",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~55.0.9",
+    "expo-router": "~55.0.8",
+    "expo-linking": "~55.0.9",
+    "expo-constants": "~55.0.9",
+    "expo-status-bar": "~55.0.4",
+    "expo-font": "~55.0.4",
+    "expo-image": "~55.0.6",
+    "expo-splash-screen": "~55.0.13",
+    "expo-localization": "~55.0.9",
+    "expo-secure-store": "~55.0.9",
+    "expo-web-browser": "~55.0.10",
+    "expo-haptics": "~55.0.9",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.84.1",
+    "react-native-web": "~0.20.0",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.24.0",
+    "react-native-reanimated": "~3.18.0",
+    "react-native-gesture-handler": "~2.25.0",
+    "@react-native-async-storage/async-storage": "2.1.2",
+    "@expo/vector-icons": "^14.1.0",
+    "@shopify/flash-list": "~1.7.3",
+    "@supabase/supabase-js": "^2.49.0",
+    "zustand": "^5.0.0",
+    "i18next": "^24.0.0",
+    "react-i18next": "^15.0.0",
+    "react-hook-form": "^7.54.0",
+    "zod": "^3.24.0",
+    "@hookform/resolvers": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.0",
+    "@types/react-dom": "~19.1.0",
+    "typescript": "~5.9.2"
+  },
+  "private": true
+}

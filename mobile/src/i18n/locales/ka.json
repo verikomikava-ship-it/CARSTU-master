@@ -1,0 +1,145 @@
+{
+  "common": {
+    "search": "ძიება",
+    "addToCart": "კალათაში დამატება",
+    "checkout": "შეკვეთის გაფორმება",
+    "price": "ფასი",
+    "gel": "₾",
+    "loading": "იტვირთება...",
+    "noResults": "შედეგი არ მოიძებნა",
+    "back": "უკან",
+    "save": "შენახვა",
+    "cancel": "გაუქმება",
+    "delete": "წაშლა",
+    "confirm": "დადასტურება",
+    "close": "დახურვა",
+    "viewAll": "ყველას ნახვა",
+    "outOfStock": "ამოიწურა",
+    "inStock": "მარაგშია",
+    "free": "უფასო",
+    "quantity": "რაოდენობა",
+    "total": "ჯამი",
+    "subtotal": "ქვეჯამი",
+    "shipping": "მიტანა",
+    "error": "შეცდომა",
+    "retry": "ხელახლა ცდა"
+  },
+  "tabs": {
+    "home": "მთავარი",
+    "catalog": "კატალოგი",
+    "cart": "კალათა",
+    "account": "ანგარიში"
+  },
+  "home": {
+    "featured": "რჩეული პროდუქტები",
+    "newArrivals": "ახალი პროდუქტები",
+    "categories": "კატეგორიები",
+    "welcome": "მოგესალმებით ManqanaAccessory-ში!",
+    "subtitle": "მანქანის აქსესუარები საუკეთესო ფასად"
+  },
+  "catalog": {
+    "allCategories": "ყველა კატეგორია",
+    "subcategories": "ქვეკატეგორიები",
+    "products": "პროდუქტები",
+    "filter": "ფილტრი",
+    "sort": "დალაგება",
+    "sortByPrice": "ფასით",
+    "sortByName": "სახელით",
+    "sortByNewest": "უახლესი",
+    "priceRange": "ფასის დიაპაზონი",
+    "brand": "ბრენდი",
+    "allBrands": "ყველა ბრენდი",
+    "apply": "გამოყენება",
+    "reset": "გასუფთავება",
+    "resultsCount": "{{count}} პროდუქტი"
+  },
+  "product": {
+    "description": "აღწერა",
+    "specifications": "მახასიათებლები",
+    "relatedProducts": "მსგავსი პროდუქტები",
+    "addedToCart": "კალათაში დაემატა!",
+    "selectQuantity": "აირჩიეთ რაოდენობა"
+  },
+  "cart": {
+    "myCart": "ჩემი კალათა",
+    "emptyCart": "კალათა ცარიელია",
+    "emptyCartMessage": "დაამატეთ პროდუქტები კალათაში",
+    "continueShopping": "შოპინგის გაგრძელება",
+    "proceedToCheckout": "შეკვეთის გაფორმება",
+    "remove": "წაშლა",
+    "clearCart": "კალათის გასუფთავება"
+  },
+  "auth": {
+    "login": "შესვლა",
+    "register": "რეგისტრაცია",
+    "logout": "გასვლა",
+    "email": "ელ.ფოსტა",
+    "password": "პაროლი",
+    "confirmPassword": "პაროლის დადასტურება",
+    "fullName": "სახელი და გვარი",
+    "phone": "ტელეფონი",
+    "forgotPassword": "დაგავიწყდა პაროლი?",
+    "noAccount": "არ გაქვთ ანგარიში?",
+    "hasAccount": "უკვე გაქვთ ანგარიში?",
+    "resetPassword": "პაროლის აღდგენა",
+    "resetEmailSent": "პაროლის აღდგენის ბმული გამოგზავნილია",
+    "loginRequired": "გთხოვთ შეხვიდეთ ანგარიშში",
+    "loginToContinue": "შეკვეთის გასაფორმებლად საჭიროა ანგარიშში შესვლა"
+  },
+  "checkout": {
+    "title": "შეკვეთის გაფორმება",
+    "deliveryInfo": "მიტანის ინფორმაცია",
+    "name": "სახელი და გვარი",
+    "phone": "ტელეფონი",
+    "city": "ქალაქი",
+    "address": "მისამართი",
+    "postalCode": "საფოსტო ინდექსი",
+    "notes": "შენიშვნა",
+    "paymentMethod": "გადახდის მეთოდი",
+    "cardPayment": "ბარათით გადახდა",
+    "cashOnDelivery": "ნაღდი ანგარიშსწორება",
+    "bogIpay": "BOG iPay",
+    "tbcCheckout": "TBC Checkout",
+    "placeOrder": "შეკვეთა",
+    "orderPlaced": "შეკვეთა მიღებულია!",
+    "orderNumber": "შეკვეთის ნომერი",
+    "thankYou": "მადლობა შეკვეთისთვის!",
+    "viewOrders": "შეკვეთების ნახვა",
+    "continueShopping": "შოპინგის გაგრძელება",
+    "required": "სავალდებულო ველი",
+    "invalidPhone": "არასწორი ტელეფონის ნომერი",
+    "invalidEmail": "არასწორი ელ.ფოსტა"
+  },
+  "orders": {
+    "title": "ჩემი შეკვეთები",
+    "emptyOrders": "შეკვეთები არ არის",
+    "orderDetails": "შეკვეთის დეტალები",
+    "status": {
+      "pending": "მოლოდინში",
+      "confirmed": "დადასტურებული",
+      "processing": "მზადდება",
+      "shipped": "გაგზავნილი",
+      "delivered": "მიტანილი",
+      "cancelled": "გაუქმებული"
+    },
+    "paymentStatus": {
+      "pending": "მოლოდინში",
+      "paid": "გადახდილი",
+      "failed": "წარუმატებელი",
+      "refunded": "დაბრუნებული"
+    }
+  },
+  "account": {
+    "title": "ჩემი ანგარიში",
+    "profile": "პროფილი",
+    "myOrders": "ჩემი შეკვეთები",
+    "addresses": "მისამართები",
+    "language": "ენა",
+    "settings": "პარამეტრები",
+    "editProfile": "პროფილის რედაქტირება"
+  },
+  "language": {
+    "ka": "ქართული",
+    "en": "English"
+  }
+}
