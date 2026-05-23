@@ -63,7 +63,7 @@ export function Header() {
 
             {/* Categories mega dropdown */}
             <div
-              className="relative pb-3"
+              className="relative"
               onMouseEnter={handleCatEnter}
               onMouseLeave={handleCatLeave}
             >
@@ -84,7 +84,7 @@ export function Header() {
               {megaOpen && (
                 <>
                   <div
-                    className="absolute top-full left-0 mt-3 bg-card border border-border rounded-2xl shadow-card-hover z-50 p-5"
+                    className="absolute top-full left-0 bg-card border border-border rounded-2xl shadow-card-hover z-50 pt-4 pb-5 px-5"
                     style={{ width: '620px' }}
                     onMouseEnter={handleCatEnter}
                     onMouseLeave={handleCatLeave}
