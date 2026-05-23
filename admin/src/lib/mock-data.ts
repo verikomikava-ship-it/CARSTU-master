@@ -6,39 +6,79 @@ import { UserProfile } from '@/types/user';
 const now = new Date().toISOString();
 
 export const mockCategories: Category[] = [
-  { id: '1', slug: 'tech-gadgets', name_ka: 'ტექნოლოგია და გაჯეტები', name_en: 'Tech & Gadgets', icon: '📱', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 0, is_active: true, created_at: now },
-  { id: '2', slug: 'cleaning-care', name_ka: 'სისუფთავე და მოვლა', name_en: 'Cleaning & Care', icon: '🧹', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 1, is_active: true, created_at: now },
-  { id: '3', slug: 'organization', name_ka: 'ორგანიზაცია და სივრცე', name_en: 'Organization & Space', icon: '📦', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 2, is_active: true, created_at: now },
-  { id: '4', slug: 'comfort', name_ka: 'კომფორტი', name_en: 'Comfort', icon: '😌', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 3, is_active: true, created_at: now },
-  { id: '5', slug: 'interior-style', name_ka: 'ინტერიერის დიზაინი', name_en: 'Interior Style', icon: '✨', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 4, is_active: true, created_at: now },
-  { id: '6', slug: 'safety-emergency', name_ka: 'უსაფრთხოება', name_en: 'Safety & Emergency', icon: '🛠️', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 5, is_active: true, created_at: now },
-  { id: '7', slug: 'daily-essentials', name_ka: 'ყოველდღიური Must-Have', name_en: 'Daily Essentials', icon: '🧰', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 6, is_active: true, created_at: now },
+  { id: '1', slug: 'laptops-computers', name_ka: 'ლეპტოპები და PC', name_en: 'Laptops & PCs', icon: '💻', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 0, is_active: true, created_at: now },
+  { id: '2', slug: 'monitors', name_ka: 'მონიტორები', name_en: 'Monitors', icon: '🖥️', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 1, is_active: true, created_at: now },
+  { id: '3', slug: 'keyboards-mice', name_ka: 'კლავიატურა და მაუსი', name_en: 'Keyboards & Mice', icon: '⌨️', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 2, is_active: true, created_at: now },
+  { id: '4', slug: 'audio', name_ka: 'აუდიო', name_en: 'Audio', icon: '🎧', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 3, is_active: true, created_at: now },
+  { id: '5', slug: 'storage', name_ka: 'მეხსიერება', name_en: 'Storage', icon: '💾', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 4, is_active: true, created_at: now },
+  { id: '6', slug: 'cables-hubs', name_ka: 'კაბელები და ადაპტერები', name_en: 'Cables & Adapters', icon: '🔌', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 5, is_active: true, created_at: now },
+  { id: '7', slug: 'networking', name_ka: 'ქსელი', name_en: 'Networking', icon: '🌐', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 6, is_active: true, created_at: now },
+  { id: '8', slug: 'components', name_ka: 'კომპონენტები', name_en: 'PC Components', icon: '🔧', description_ka: null, description_en: null, image_url: null, parent_id: null, sort_order: 7, is_active: true, created_at: now },
+  // Subcategories
+  { id: '1-laptops', slug: 'laptops', name_ka: 'ლეპტოპები', name_en: 'Laptops', icon: '💻', description_ka: null, description_en: null, image_url: null, parent_id: '1', sort_order: 0, is_active: true, created_at: now },
+  { id: '1-desktop-pcs', slug: 'desktop-pcs', name_ka: 'სტაციონარული კომპიუტერები', name_en: 'Desktop PCs', icon: '🖥️', description_ka: null, description_en: null, image_url: null, parent_id: '1', sort_order: 1, is_active: true, created_at: now },
+  { id: '1-mini-pcs', slug: 'mini-pcs', name_ka: 'Mini PC', name_en: 'Mini PCs', icon: '📦', description_ka: null, description_en: null, image_url: null, parent_id: '1', sort_order: 2, is_active: true, created_at: now },
+  { id: '1-all-in-one', slug: 'all-in-one', name_ka: 'All-in-One კომპიუტერები', name_en: 'All-in-One PCs', icon: '🖥️', description_ka: null, description_en: null, image_url: null, parent_id: '1', sort_order: 3, is_active: true, created_at: now },
+  { id: '2-gaming-monitors', slug: 'gaming-monitors', name_ka: 'სათამაშო მონიტორები', name_en: 'Gaming Monitors', icon: '🎮', description_ka: null, description_en: null, image_url: null, parent_id: '2', sort_order: 0, is_active: true, created_at: now },
+  { id: '2-office-monitors', slug: 'office-monitors', name_ka: 'საოფისე მონიტორები', name_en: 'Office Monitors', icon: '🖥️', description_ka: null, description_en: null, image_url: null, parent_id: '2', sort_order: 1, is_active: true, created_at: now },
+  { id: '2-portable-monitors', slug: 'portable-monitors', name_ka: 'პორტატული მონიტორები', name_en: 'Portable Monitors', icon: '📱', description_ka: null, description_en: null, image_url: null, parent_id: '2', sort_order: 2, is_active: true, created_at: now },
+  { id: '3-mechanical-keyboards', slug: 'mechanical-keyboards', name_ka: 'მექანიკური კლავიატურები', name_en: 'Mechanical Keyboards', icon: '⌨️', description_ka: null, description_en: null, image_url: null, parent_id: '3', sort_order: 0, is_active: true, created_at: now },
+  { id: '3-gaming-mice', slug: 'gaming-mice', name_ka: 'სათამაშო მაუსი', name_en: 'Gaming Mice', icon: '🖱️', description_ka: null, description_en: null, image_url: null, parent_id: '3', sort_order: 1, is_active: true, created_at: now },
+  { id: '3-wireless-keyboards', slug: 'wireless-keyboards', name_ka: 'უსადენო კლავიატურები', name_en: 'Wireless Keyboards', icon: '⌨️', description_ka: null, description_en: null, image_url: null, parent_id: '3', sort_order: 2, is_active: true, created_at: now },
+  { id: '4-headphones', slug: 'headphones', name_ka: 'ყურსასმენები', name_en: 'Headphones', icon: '🎧', description_ka: null, description_en: null, image_url: null, parent_id: '4', sort_order: 0, is_active: true, created_at: now },
+  { id: '4-gaming-headsets', slug: 'gaming-headsets', name_ka: 'სათამაშო ჰედსეტი', name_en: 'Gaming Headsets', icon: '🎮', description_ka: null, description_en: null, image_url: null, parent_id: '4', sort_order: 1, is_active: true, created_at: now },
+  { id: '4-speakers', slug: 'speakers', name_ka: 'დინამიკები', name_en: 'Speakers', icon: '🔊', description_ka: null, description_en: null, image_url: null, parent_id: '4', sort_order: 2, is_active: true, created_at: now },
+  { id: '5-ssd', slug: 'ssd', name_ka: 'SSD დისკები', name_en: 'SSD Drives', icon: '💿', description_ka: null, description_en: null, image_url: null, parent_id: '5', sort_order: 0, is_active: true, created_at: now },
+  { id: '5-hdd', slug: 'hdd', name_ka: 'HDD დისკები', name_en: 'HDD Drives', icon: '💾', description_ka: null, description_en: null, image_url: null, parent_id: '5', sort_order: 1, is_active: true, created_at: now },
+  { id: '5-usb-flash', slug: 'usb-flash', name_ka: 'USB ფლეშ დრაივები', name_en: 'USB Flash Drives', icon: '🔌', description_ka: null, description_en: null, image_url: null, parent_id: '5', sort_order: 2, is_active: true, created_at: now },
+  { id: '6-usb-hubs', slug: 'usb-hubs', name_ka: 'USB Hub-ები', name_en: 'USB Hubs', icon: '🔌', description_ka: null, description_en: null, image_url: null, parent_id: '6', sort_order: 0, is_active: true, created_at: now },
+  { id: '6-hdmi-cables', slug: 'hdmi-cables', name_ka: 'HDMI კაბელები', name_en: 'HDMI Cables', icon: '🔌', description_ka: null, description_en: null, image_url: null, parent_id: '6', sort_order: 1, is_active: true, created_at: now },
+  { id: '7-routers', slug: 'routers', name_ka: 'როუტერები', name_en: 'Routers', icon: '📶', description_ka: null, description_en: null, image_url: null, parent_id: '7', sort_order: 0, is_active: true, created_at: now },
+  { id: '7-wifi-adapters', slug: 'wifi-adapters', name_ka: 'WiFi ადაპტერები', name_en: 'WiFi Adapters', icon: '📡', description_ka: null, description_en: null, image_url: null, parent_id: '7', sort_order: 1, is_active: true, created_at: now },
+  { id: '8-graphics-cards', slug: 'graphics-cards', name_ka: 'ვიდეო ბარათები', name_en: 'Graphics Cards', icon: '🎮', description_ka: null, description_en: null, image_url: null, parent_id: '8', sort_order: 0, is_active: true, created_at: now },
+  { id: '8-ram', slug: 'ram', name_ka: 'ოპერატიული მეხსიერება (RAM)', name_en: 'RAM Memory', icon: '🧩', description_ka: null, description_en: null, image_url: null, parent_id: '8', sort_order: 1, is_active: true, created_at: now },
+  { id: '8-processors', slug: 'processors', name_ka: 'პროცესორები', name_en: 'Processors (CPU)', icon: '⚙️', description_ka: null, description_en: null, image_url: null, parent_id: '8', sort_order: 2, is_active: true, created_at: now },
 ];
 
 const productData = [
-  { name_ka: 'ტელეფონის მაგნიტური დამჭერი', name_en: 'Magnetic Phone Holder', price: 25, sale_price: 19 as number | null, cat: '1', brand: 'Baseus', featured: true, stock: 45 },
-  { name_ka: 'USB-C სწრაფი დამტენი', name_en: 'USB-C Fast Charger', price: 35, sale_price: null as number | null, cat: '1', brand: 'Anker', featured: true, stock: 30 },
-  { name_ka: 'Bluetooth FM ტრანსმიტერი', name_en: 'Bluetooth FM Transmitter', price: 29, sale_price: 22 as number | null, cat: '1', brand: 'Ugreen', featured: true, stock: 20 },
-  { name_ka: 'ვიდეორეგისტრატორი 1080P', name_en: '1080P Dash Camera', price: 89, sale_price: 69 as number | null, cat: '1', brand: 'Viofo', featured: true, stock: 12 },
-  { name_ka: 'მანქანის მტვერსასრუტი', name_en: 'Portable Car Vacuum', price: 55, sale_price: null as number | null, cat: '2', brand: 'Xiaomi', featured: true, stock: 25 },
-  { name_ka: 'მიკროფიბრის ნაკრები (5ც)', name_en: 'Microfiber Cloth Set (5pc)', price: 15, sale_price: 12 as number | null, cat: '2', brand: 'ChemicalGuys', featured: false, stock: 100 },
-  { name_ka: 'საწმენდი გელი', name_en: 'Cleaning Gel', price: 10, sale_price: null as number | null, cat: '2', brand: 'AutoClean', featured: false, stock: 80 },
-  { name_ka: 'საბარგულის ორგანიზატორი', name_en: 'Trunk Organizer', price: 45, sale_price: 35 as number | null, cat: '3', brand: 'CarSpace', featured: true, stock: 18 },
-  { name_ka: 'სავარძლის უკანა ჯიბე', name_en: 'Seat Back Pocket Organizer', price: 20, sale_price: null as number | null, cat: '3', brand: 'CarSpace', featured: false, stock: 50 },
-  { name_ka: 'საჭის ტყავის საფარი', name_en: 'Leather Steering Cover', price: 30, sale_price: null as number | null, cat: '4', brand: 'AutoLux', featured: true, stock: 35 },
-  { name_ka: 'ორთოპედიული სავარძლის ბალიში', name_en: 'Orthopedic Seat Cushion', price: 40, sale_price: 32 as number | null, cat: '4', brand: 'ComfortDrive', featured: true, stock: 22 },
-  { name_ka: 'LED ინტერიერის განათება RGB', name_en: 'RGB Interior LED Strip', price: 35, sale_price: 28 as number | null, cat: '5', brand: 'GlowRide', featured: true, stock: 40 },
-  { name_ka: 'სურნელი - ავტომატური', name_en: 'Auto Air Freshener', price: 12, sale_price: null as number | null, cat: '5', brand: 'Yankee', featured: false, stock: 60 },
-  { name_ka: 'საგანგებო ჩაქუჩი + საჭრისი', name_en: 'Emergency Hammer + Cutter', price: 15, sale_price: null as number | null, cat: '6', brand: 'SafeEscape', featured: false, stock: 70 },
-  { name_ka: 'საბურავის კომპრესორი 12V', name_en: '12V Tire Compressor', price: 65, sale_price: 52 as number | null, cat: '6', brand: 'AirForce', featured: true, stock: 15 },
-  { name_ka: 'Jump Starter 12000mAh', name_en: 'Jump Starter 12000mAh', price: 95, sale_price: 79 as number | null, cat: '6', brand: 'NOCO', featured: true, stock: 8 },
-  { name_ka: '3-in-1 დამტენის კაბელი', name_en: '3-in-1 Charging Cable', price: 12, sale_price: 9 as number | null, cat: '7', brand: 'Baseus', featured: false, stock: 150 },
-  { name_ka: 'LED ფანარი მინი', name_en: 'Mini LED Flashlight', price: 15, sale_price: null as number | null, cat: '7', brand: 'Olight', featured: false, stock: 90 },
-  { name_ka: 'მზის ჩამკეტი (წინა)', name_en: 'Windshield Sunshade', price: 22, sale_price: null as number | null, cat: '4', brand: 'SunBlock', featured: false, stock: 55 },
-  { name_ka: 'სავარძლის ნაპრალის შემავსებელი', name_en: 'Seat Gap Filler (2pc)', price: 18, sale_price: 14 as number | null, cat: '3', brand: 'DropStop', featured: false, stock: 65 },
+  { name_ka: 'ლეპტოპი Lenovo IdeaPad 15', name_en: 'Lenovo IdeaPad 15 Laptop', price: 1299, sale_price: 999 as number | null, cat: '1', brand: 'Lenovo', featured: true, stock: 12 },
+  { name_ka: 'ლეპტოპი ASUS VivoBook 14', name_en: 'ASUS VivoBook 14', price: 899, sale_price: null as number | null, cat: '1', brand: 'ASUS', featured: true, stock: 8 },
+  { name_ka: 'Mini PC Intel NUC', name_en: 'Intel NUC Mini PC', price: 549, sale_price: 449 as number | null, cat: '1', brand: 'Intel', featured: false, stock: 5 },
+  { name_ka: 'მონიტორი Samsung 27" IPS', name_en: 'Samsung 27" IPS Monitor', price: 449, sale_price: 379 as number | null, cat: '2', brand: 'Samsung', featured: true, stock: 15 },
+  { name_ka: 'სათამაშო მონიტორი AOC 24" 144Hz', name_en: 'AOC 24" 144Hz Gaming Monitor', price: 329, sale_price: null as number | null, cat: '2', brand: 'AOC', featured: true, stock: 10 },
+  { name_ka: 'პორტატული მონიტორი 15.6"', name_en: '15.6" Portable Monitor', price: 249, sale_price: 199 as number | null, cat: '2', brand: 'ASUS', featured: false, stock: 7 },
+  { name_ka: 'მექანიკური კლავიატურა Keychron K2', name_en: 'Keychron K2 Mechanical Keyboard', price: 119, sale_price: null as number | null, cat: '3', brand: 'Keychron', featured: true, stock: 20 },
+  { name_ka: 'სათამაშო მაუსი Logitech G502', name_en: 'Logitech G502 Gaming Mouse', price: 89, sale_price: 69 as number | null, cat: '3', brand: 'Logitech', featured: true, stock: 25 },
+  { name_ka: 'უსადენო კლავიატურა + მაუსი', name_en: 'Wireless Keyboard & Mouse Combo', price: 65, sale_price: null as number | null, cat: '3', brand: 'Microsoft', featured: false, stock: 30 },
+  { name_ka: 'მაუსპადი RGB XL', name_en: 'XL RGB Gaming Mouse Pad', price: 35, sale_price: 28 as number | null, cat: '3', brand: 'SteelSeries', featured: false, stock: 50 },
+  { name_ka: 'ყურსასმენი Sony WH-1000XM5', name_en: 'Sony WH-1000XM5 Headphones', price: 399, sale_price: 329 as number | null, cat: '4', brand: 'Sony', featured: true, stock: 8 },
+  { name_ka: 'სათამაშო ჰედსეტი HyperX Cloud', name_en: 'HyperX Cloud Gaming Headset', price: 129, sale_price: null as number | null, cat: '4', brand: 'HyperX', featured: true, stock: 15 },
+  { name_ka: 'Bluetooth დინამიკი JBL Flip 6', name_en: 'JBL Flip 6 Bluetooth Speaker', price: 149, sale_price: 119 as number | null, cat: '4', brand: 'JBL', featured: true, stock: 18 },
+  { name_ka: 'USB მიკროფონი Blue Yeti', name_en: 'Blue Yeti USB Microphone', price: 129, sale_price: null as number | null, cat: '4', brand: 'Blue', featured: false, stock: 10 },
+  { name_ka: 'SSD Samsung 1TB NVMe', name_en: 'Samsung 1TB NVMe SSD', price: 119, sale_price: 89 as number | null, cat: '5', brand: 'Samsung', featured: true, stock: 35 },
+  { name_ka: 'HDD Seagate 2TB', name_en: 'Seagate 2TB HDD', price: 79, sale_price: null as number | null, cat: '5', brand: 'Seagate', featured: false, stock: 25 },
+  { name_ka: 'USB ფლეშ დრაივი 128GB', name_en: '128GB USB Flash Drive', price: 25, sale_price: 19 as number | null, cat: '5', brand: 'Kingston', featured: false, stock: 80 },
+  { name_ka: 'USB Hub 7-Port 3.0', name_en: '7-Port USB 3.0 Hub', price: 35, sale_price: null as number | null, cat: '6', brand: 'Ugreen', featured: false, stock: 40 },
+  { name_ka: 'HDMI კაბელი 2m 4K', name_en: '4K HDMI Cable 2m', price: 15, sale_price: null as number | null, cat: '6', brand: 'Baseus', featured: false, stock: 100 },
+  { name_ka: 'USB-C Docking Station 12-in-1', name_en: 'USB-C Docking Station 12-in-1', price: 89, sale_price: 69 as number | null, cat: '6', brand: 'Anker', featured: true, stock: 12 },
+  { name_ka: 'WiFi 6 Router TP-Link AX3000', name_en: 'TP-Link AX3000 WiFi 6 Router', price: 129, sale_price: null as number | null, cat: '7', brand: 'TP-Link', featured: true, stock: 10 },
+  { name_ka: 'WiFi USB ადაპტერი AC1300', name_en: 'AC1300 WiFi USB Adapter', price: 29, sale_price: 22 as number | null, cat: '7', brand: 'ASUS', featured: false, stock: 30 },
+  { name_ka: 'ვიდეო ბარათა NVIDIA RTX 4060', name_en: 'NVIDIA RTX 4060 Graphics Card', price: 699, sale_price: null as number | null, cat: '8', brand: 'NVIDIA', featured: true, stock: 4 },
+  { name_ka: 'RAM 16GB DDR5 Kingston', name_en: 'Kingston 16GB DDR5 RAM', price: 89, sale_price: 69 as number | null, cat: '8', brand: 'Kingston', featured: true, stock: 20 },
+  { name_ka: 'პროცესორი Intel Core i5-13600K', name_en: 'Intel Core i5-13600K CPU', price: 349, sale_price: 299 as number | null, cat: '8', brand: 'Intel', featured: true, stock: 6 },
 ];
 
-export const mockProducts: Product[] = productData.map((p, i) => ({
+const CAT_COLORS: Record<string, [string, string]> = {
+  '1': ['6366f1', 'ffffff'], '2': ['3b82f6', 'ffffff'], '3': ['7c3aed', 'ffffff'],
+  '4': ['f97316', 'ffffff'], '5': ['10b981', 'ffffff'], '6': ['06b6d4', 'ffffff'],
+  '7': ['0d9488', 'ffffff'], '8': ['ef4444', 'ffffff'],
+};
+
+export const mockProducts: Product[] = productData.map((p, i) => {
+  const [bg, fg] = CAT_COLORS[p.cat] || ['6366f1', 'ffffff'];
+  const label = encodeURIComponent(p.name_en.split(' ').slice(0, 2).join('+'));
+  const imageUrl = `https://placehold.co/400x400/${bg}/${fg}?text=${label}&font=sans`;
+  return {
   id: `prod-${i + 1}`,
   sku: `SKU-${1000 + i}`,
   name_ka: p.name_ka,
@@ -57,7 +97,7 @@ export const mockProducts: Product[] = productData.map((p, i) => ({
   images: [{
     id: `img-${i + 1}`,
     product_id: `prod-${i + 1}`,
-    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=200&h=200&fit=crop',
+    url: imageUrl,
     alt_text: p.name_en,
     sort_order: 0,
     is_primary: true,
@@ -67,7 +107,8 @@ export const mockProducts: Product[] = productData.map((p, i) => ({
     : undefined,
   created_at: new Date(Date.now() - i * 86400000).toISOString(),
   updated_at: now,
-}));
+  };
+});
 
 const names = ['გიორგი კახიძე', 'ნინო ბერიძე', 'დავით ჯანელიძე', 'მარიამ ხვედელიძე', 'ალექსი მამალაძე', 'თამარ გოგოლაძე', 'ირაკლი შენგელია', 'ანა ტაბიძე', 'ლევან ნოზაძე', 'სოფო ქურდაძე'];
 const phones = ['+995 555 12 34 56', '+995 577 98 76 54', '+995 599 11 22 33', '+995 551 44 55 66', '+995 568 77 88 99', '+995 555 00 11 22', '+995 577 33 44 55', '+995 599 66 77 88', '+995 551 99 00 11', '+995 568 22 33 44'];

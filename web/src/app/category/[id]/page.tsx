@@ -46,7 +46,8 @@ export default function CategoryPage() {
   useEffect(() => {
     if (catId) {
       if (selectedSub) {
-        getProducts({ categoryId: selectedSub, sortBy, limit: 50 }).then(setProducts).catch(console.error);
+        // include both subcategory id AND parent id (mock products use parent id)
+        getProducts({ categoryIds: [selectedSub, catId], sortBy, limit: 50 }).then(setProducts).catch(console.error);
       } else {
         const allIds = [catId, ...subcategories.map((s) => s.id)];
         getProducts({ categoryIds: allIds, sortBy, limit: 50 }).then(setProducts).catch(console.error);

@@ -1,5 +1,5 @@
 import { supabase, isMockMode } from '@/lib/supabase';
-import { mockCategories } from '@/lib/mock-data';
+import { mockCategories, mockSubcategories } from '@/lib/mock-data';
 import { Category } from '@/types/category';
 
 export async function getCategories(): Promise<Category[]> {
@@ -17,7 +17,7 @@ export async function getCategories(): Promise<Category[]> {
 }
 
 export async function getSubcategories(parentId: string): Promise<Category[]> {
-  if (isMockMode) return [];
+  if (isMockMode) return mockSubcategories.filter((s) => s.parent_id === parentId);
 
   const { data, error } = await supabase
     .from('categories')

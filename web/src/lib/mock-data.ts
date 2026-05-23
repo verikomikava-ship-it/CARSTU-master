@@ -19,6 +19,24 @@ export const mockCategories: Category[] = CATEGORIES.map((cat, i) => ({
   created_at: now,
 }));
 
+// Subcategories generated from CATEGORIES constant — id format: "{parentId}-{slug}"
+export const mockSubcategories: Category[] = CATEGORIES.flatMap((cat) =>
+  cat.subcategories.map((sub, i) => ({
+    id: `${cat.id}-${sub.slug}`,
+    slug: sub.slug,
+    name_ka: sub.nameKa,
+    name_en: sub.nameEn,
+    description_ka: null,
+    description_en: null,
+    icon: cat.emoji,
+    image_url: null,
+    parent_id: cat.id,
+    sort_order: i,
+    is_active: true,
+    created_at: now,
+  }))
+);
+
 // Category colors for placeholder images
 // cat 1=Laptops(indigo), 2=Monitors(blue), 3=KB&Mice(violet), 4=Audio(orange),
 // cat 5=Storage(emerald), 6=Cables(cyan), 7=Networking(teal), 8=Components(rose)
